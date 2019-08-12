@@ -122,7 +122,6 @@ if (query('inject_script', parselyUrl)) {
 }
 
 
-
 ___NOTES___
 
 Created on 8/12/2019, 12:56:30 PM
