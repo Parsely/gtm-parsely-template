@@ -1,6 +1,6 @@
 documentation: "https://www.parse.ly/help/"
 homepage: "https://www.parse.ly"
 versions: 
-  - sha: 5793aa2f1e93a4ac73e25db2e35e15a03f8c9b6a
+  - sha: eeda8e9b344fc7faf6b0053ba3348e1054f938f5
   - changeNotes: "Initial release"
 
