@@ -2,5 +2,5 @@ documentation: "https://www.parse.ly/help/"
 homepage: "https://www.parse.ly"
 versions: 
   - sha: b9a8175ac3b1b650bcf004a8cb8f0194ed6d92fe
-    changeNotes: "Initial release"
+    changeNotes: Initial release
 
