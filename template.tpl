@@ -41,8 +41,8 @@ ___TEMPLATE_PARAMETERS___
         "displayValue": "Tracker"
       },
       {
-        "value": "conversions",
-        "displayValue": "Conversions tracking"
+        "value": "conversion",
+        "displayValue": "Conversion tracking"
       },
       {
         "value": "dynamic",
@@ -173,7 +173,7 @@ ___TEMPLATE_PARAMETERS___
     "enablingConditions": [
       {
         "paramName": "type",
-        "paramValue": "conversions",
+        "paramValue": "conversion",
         "type": "EQUALS"
       }
     ],
@@ -200,7 +200,7 @@ ___TEMPLATE_PARAMETERS___
     "enablingConditions": [
       {
         "paramName": "type",
-        "paramValue": "conversions",
+        "paramValue": "conversion",
         "type": "EQUALS"
       }
     ],
@@ -319,7 +319,7 @@ if (data.type == 'tracker') {
     data.gtmOnFailure();
   }
 
-} else if (data.type == 'conversions') {
+} else if (data.type == 'conversion') {
 
   const parselyTrackingCall = 'PARSELY.conversions.' + data.conversionType;
 
