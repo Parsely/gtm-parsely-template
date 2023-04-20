@@ -2,9 +2,11 @@ documentation: "https://docs.parse.ly/google-tag-manager/"
 homepage: "https://www.parse.ly"
 versions: 
   # Latest version
-  - sha: 8d0091fdeb635ce066863cfe4b364b3bde8911e7
+  - sha: e33a33b1a441a072f443be78d25f4a6d3fd5cd88
     changeNotes: Conversion tracking and dynamic tracking functionality added.
   # Older versions
+  - sha: 8d0091fdeb635ce066863cfe4b364b3bde8911e7
+    changeNotes: Conversion tracking and dynamic tracking functionality added.
   - sha: 755f27df3810effdc53e973f0217891bf8bff549
     changeNotes: Audience segments and autotracking toggling added.
   - sha: 4706ad9d06370c834f6d93ecbab18363c80020c7
