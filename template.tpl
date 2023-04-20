@@ -50,7 +50,8 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "simpleValueType": true,
-    "defaultValue": "tracker"
+    "defaultValue": "tracker",
+    "alwaysInSummary": true
   },
   {
     "type": "TEXT",
@@ -261,9 +262,9 @@ const callInWindow = require('callInWindow');
 
 log('data =', data);
 
-if (data.type == 'tracker') {
+if (data.type == 'tracker' || !data.hasOwnProperty('type')) {
   const parselySiteId = encodeUriComponent(data.parselySiteId);
-  const parselyUrl = 'https://cdn.parsely.com/keys/' + parselySiteId + '/p.js?gtm_ver=3.0';
+  const parselyUrl = 'https://cdn.parsely.com/keys/' + parselySiteId + '/p.js?gtm_ver=3.1';
   
   // return or create new PARSELY object
   const getPARSELY = function() {
@@ -348,6 +349,9 @@ if (data.type == 'tracker') {
   log('PARSE.LY: Pageview sent with custom values');
   data.gtmOnSuccess();
   
+} else {
+  log('PARSE.LY: Error - please contact support@parsely.com');
+  data.gtmOnFailure();
 }
 
 
@@ -389,7 +393,7 @@ ___WEB_PERMISSIONS___
             "listItem": [
               {
                 "type": 1,
-                "string": "https://cdn.parsely.com/keys/*/p.js?gtm_ver\u003d3.0"
+                "string": "https://cdn.parsely.com/keys/*/p.js?gtm_ver\u003d3.1"
               }
             ]
           }
