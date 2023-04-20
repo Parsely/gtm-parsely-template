@@ -50,7 +50,8 @@ ___TEMPLATE_PARAMETERS___
       }
     ],
     "simpleValueType": true,
-    "defaultValue": "tracker"
+    "defaultValue": "tracker",
+    "alwaysInSummary": true
   },
   {
     "type": "TEXT",
