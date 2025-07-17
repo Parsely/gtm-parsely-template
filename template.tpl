@@ -13,7 +13,7 @@ ___INFO___
   "id": "cvt_temp_public_id",
   "version": 1,
   "securityGroups": [],
-  "displayName": "Parse.ly",	
+  "displayName": "Parse.ly",
   "categories": ["ANALYTICS"],
   "brand": {
     "id": "brand_dummy",
@@ -168,6 +168,10 @@ ___TEMPLATE_PARAMETERS___
       {
         "value": "trackPurchase",
         "displayValue": "Purchase"
+      },
+      {
+        "value": "trackCustom",
+        "displayValue": "Custom"
       }
     ],
     "simpleValueType": true,
@@ -264,7 +268,7 @@ log('data =', data);
 
 if (data.type == 'tracker' || !data.hasOwnProperty('type')) {
   const parselySiteId = encodeUriComponent(data.parselySiteId);
-  const parselyUrl = 'https://cdn.parsely.com/keys/' + parselySiteId + '/p.js?gtm_ver=3.1';
+  const parselyUrl = 'https://cdn.parsely.com/keys/' + parselySiteId + '/p.js?gtm_ver=3.2';
   
   // return or create new PARSELY object
   const getPARSELY = function() {
@@ -393,7 +397,7 @@ ___WEB_PERMISSIONS___
             "listItem": [
               {
                 "type": 1,
-                "string": "https://cdn.parsely.com/keys/*/p.js?gtm_ver\u003d3.1"
+                "string": "https://cdn.parsely.com/keys/*/p.js?gtm_ver\u003d3.2"
               }
             ]
           }
@@ -753,6 +757,45 @@ ___WEB_PERMISSIONS___
                   {
                     "type": 1,
                     "string": "PARSELY.conversions.trackLinkClick"
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  },
+                  {
+                    "type": 8,
+                    "boolean": false
+                  },
+                  {
+                    "type": 8,
+                    "boolean": true
+                  }
+                ]
+              },
+              {
+                "type": 3,
+                "mapKey": [
+                  {
+                    "type": 1,
+                    "string": "key"
+                  },
+                  {
+                    "type": 1,
+                    "string": "read"
+                  },
+                  {
+                    "type": 1,
+                    "string": "write"
+                  },
+                  {
+                    "type": 1,
+                    "string": "execute"
+                  }
+                ],
+                "mapValue": [
+                  {
+                    "type": 1,
+                    "string": "PARSELY.conversions.trackCustom"
                   },
                   {
                     "type": 8,
